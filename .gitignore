@@ -23,9 +23,6 @@ lib-cov
 coverage
 *.lcov
 
-# Node Modules directory and DS Store
-node_modules/
-.DS_Store
 
 # nyc test coverage
 .nyc_output
