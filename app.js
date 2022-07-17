@@ -7,6 +7,9 @@ const data = require('data.json');
 
 // Import routes
 const routes = require('./routes/routes');
+const indexRouter = require('./routes/index');
+const aboutRouter = require('./routes/about');
+
 
 // Import 404 and global error handlers
 const errorHandlers = require('./errorHandlers');
@@ -15,8 +18,8 @@ const errorHandlers = require('./errorHandlers');
 app.use(routes);
 
 // Pass 404 and global error handlers to the app
-// app.use(errorHandlers.handleFourOhFour);
-// app.use(errorHandlers.handleGlobalError);
+app.use(errorHandlers.handleFourOhFour);
+app.use(errorHandlers.handleGlobalError);
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -54,3 +57,5 @@ app.set('view engine', 'pug');
 app.listen(port, () => {
     console.log('Server listening on port 3000')
 });
+
+module.exports = app;

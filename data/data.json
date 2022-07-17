@@ -10,57 +10,52 @@ github_link - link to the GitHub repo
 image_urls - an array of strings containing file paths from the views folder to the images themselves. You'll need a main image to be shown on the landing page, and one to three images to be shown on the project page.
 */
 
-
-
-
 {
-    "projects": [ 
-        {
-            "id": 0,
-            "project_name": "",
-            "description": "",
-            "technologies": ["", ""],
-            "live_link": "",
-            "github_link": "",
-            "image_urls": ""
-    }, 
+  "project": [
     {
-                "id": 1,
-                "project_name": "",
-                "description": "",
-                "technologies": ["", ""],
-                "live_link": "",
-                "github_link": "",
-                "image_urls": ""
-        
-
+      "id": 0,
+      "project_name": "",
+      "description": "",
+      "technologies": ["", ""],
+      "live_link": "",
+      "github_link": "",
+      "image_urls": ""
     },
     {
-                "id": 2,
-                "project_name": "",
-                "description": "",
-                "technologies": ["", ""],
-                "live_link": "",
-                "github_link": "",
-                "image_urls": ""
-    }, 
-    {
-                "id": 3,
-                "project_name": "",
-                "description": "",
-                "technologies": ["", ""],
-                "live_link": "",
-                "github_link": "",
-                "image_urls": ""
+      "id": 1,
+      "project_name": "",
+      "description": "",
+      "technologies": ["", ""],
+      "live_link": "",
+      "github_link": "",
+      "image_urls": ""
     },
     {
-                "id": 4,
-                "project_name": "",
-                "description": "",
-                "technologies": ["", ""],
-                "live_link": "",
-                "github_link": "",
-                "image_urls": ""
+      "id": 2,
+      "project_name": "",
+      "description": "",
+      "technologies": ["", ""],
+      "live_link": "",
+      "github_link": "",
+      "image_urls": ""
+    },
+    {
+      "id": 3,
+      "project_name": "",
+      "description": "",
+      "technologies": ["", ""],
+      "live_link": "",
+      "github_link": "",
+      "image_urls": ""
+    },
+    {
+      "id": 4,
+      "project_name": "",
+      "description": "",
+      "technologies": ["", ""],
+      "live_link": "",
+      "github_link": "",
+      "image_urls": ""
     }
   ]
 }
