@@ -16,6 +16,7 @@ const errorHandlers = require('./errorHandlers');
 
 // Pass route handlers to the app
 app.use(routes);
+app.use('/', indexRouter);
 
 // Pass 404 and global error handlers to the app
 app.use(errorHandlers.handleFourOhFour);
@@ -31,27 +32,26 @@ app.set('view engine', 'pug');
 //use a static route and the express.static method to serve the static files located in the public folder
  app.use('/static', express.static('public'));
 
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  console.log('Error 404 Not Found');
+  next(err);
+});
 
-
-// app.use(bodyParser.urlencoded({ extended: false}));
-// app.use(cookieParser());
-// const mainRoutes = require('./routes');
-
-
-// app.use(mainRoutes);
-
-
-// app.use((req, res, next) => {
-//   const err = new Error('Not Found');
-//   err.status = 404;
-//   next(err);
-// });
-
-// app.use((err, req, res, next) => {
-//   res.locals.error = err;
-//   res.status(err.status);
-//   res.render('error');
-// });
+app.use((err, req, res, next) => {
+  if (err.status = 404) {
+    err.message = 'Not Found';
+    console.log('Error 404 Sorry Your Page was Not Found');
+    res.status(404).render('not-found', { err });
+  } else {
+    err.message = 'Uh oh, something is wrong with the server';
+    err.status = 500;
+    console.log('Error 500 Something is wrong with the server');
+    res.render('error');
+  }
+ 
+});
 
 // Turn on Express Server
 app.listen(port, () => {
