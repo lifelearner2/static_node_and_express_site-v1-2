@@ -15,31 +15,13 @@ router.get('/', (req, res) => {
      console.log('Handling request to root or "home" route, "/"');
 
 //About route
-router.get('/about', (req, res) => {
-    console.log('Handling request to "about" route, "/"');
-});
-
-
-// Create greeting and use helper functions to reverse and shorten a string
-//   const greeting = 'Hello World!'
-//   const reversedGreeting = reverseString(greeting);
-//   const shortenedDesc = shortenString('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel sapien diam. Vestibulum sed turpis id eros varius cursus.');
-
-//   // Send greeting to the page
-//   res.send(`
-//     <h1>${greeting} &#128075;</h1>
-//     <p><strong>Reversed greeting:</strong> ${reversedGreeting}</p>
-//     <p><strong>Shortened description:</strong> ${shortenedDesc}</p>
-//   `);
- });
-
-
-
-
-
+// router.get('/about', (req, res) => {
+//     console.log('Handling request to "about" route, "/"');
+// });
 
 
 
 
 // Export router
  module.exports = router;
+})

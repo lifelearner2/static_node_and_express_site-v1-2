@@ -3,12 +3,12 @@ const express = require('express');
 const app = express();
 const port = 3000
 
-const data = require('data.json');
+//const data = require('data.json');
 
 // Import routes
 const routes = require('./routes/routes');
 const indexRouter = require('./routes/index');
-const aboutRouter = require('./routes/about');
+//const aboutRouter = require('./routes/about');
 
 
 // Import 404 and global error handlers
