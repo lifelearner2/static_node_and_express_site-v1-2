@@ -15,10 +15,11 @@ block content
 
         //- Use interpolation to dynamically add the project title
         h1 Project Name
+        h1= project.project_name
 
         //- Use interpolation to dynamically add the project description
         p Description
-
+        p= project.description
       .project-tech-links-box.box
         h6 Technologies
         ul
@@ -27,6 +28,8 @@ block content
           li HTML
           li CSS
           li JavaScript
+            each technology in project.technologies
+              li= technology
 
         //- Add the href values to the links below
         a.btn-link(href='') Live Demo
@@ -38,6 +41,7 @@ block content
       img.project-img(src='https://placehold.it/1200x550', alt='')
       img.project-img(src='https://placehold.it/1200x550', alt='')
       img.project-img(src='https://placehold.it/1200x550', alt='')
+      img(src=`${project.image_url}` width='320' height='240')
 
     nav.nav
       a(href='/')

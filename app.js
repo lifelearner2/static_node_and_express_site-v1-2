@@ -3,8 +3,10 @@ const express = require('express');
 const app = express();
 const port = 3000
 
+const data = require('data.json');
+
 // Import routes
-const routes = require('./routes');
+const routes = require('./routes/routes');
 
 // Import 404 and global error handlers
 const errorHandlers = require('./errorHandlers');
