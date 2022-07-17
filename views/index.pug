@@ -15,8 +15,19 @@ block content
     .projects-box.box.grid
 
       //- Use the Pug `each` iterator to loop over the projects in your data file  
-      
-        //- Use the example Pug code below and interpolated template literals as needed to dynamically generate:
+      each project in projects 
+        
+
+ a(href=`/projects/${project.id}`)
+      h2= project.project_name
+      img(src=`${project.image_url}` width='320' height='240')
+
+       .cell
+          a(href='#')
+            img.thumbnail(src='https://placehold.it/550x550', alt='')
+            h5 My Site
+
+//- Use the example Pug code below and interpolated template literals as needed to dynamically generate:
           //- The paths in the link's href and img's src attributes
           //- The text 'Thumbnail' interpolated with the project title for the img's alt attribute
           //- The project title for the h5 element's text
@@ -26,3 +37,5 @@ block content
             img.thumbnail(src='https://placehold.it/550x550', alt='')
             h5 My Site
 
+
+ 
