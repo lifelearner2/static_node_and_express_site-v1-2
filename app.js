@@ -1,9 +1,32 @@
 // Import Express and set up the app
 const express = require('express');
+const pug = require('pug');
 const app = express();
 const port = 3000
 
+const dataJson = require('./data/data.json');
+const data = dataJson.projects;
+//const data = dataJson.project;
+
 //const data = require('data.json');
+
+app.get('/', (req, res)=>{
+  res.render('index',{data})
+ });
+
+// Compile the source code
+const compiledFunction = pug.compileFile('./views/about.pug');
+// Render a set of data
+console.log(compiledFunction({
+  name: 'Jeanene'
+}));
+
+// Compile about.pug, and render a set of data
+console.log(pug.renderFile('./views/about.pug', {
+  name: 'Jeanene'
+}));
+// "<p>Jeanene's Pug source code!</p>"
+
 
 // Import routes
 const routes = require('./routes/routes');
@@ -11,6 +34,18 @@ const indexRouter = require('./routes/index');
 //const aboutRouter = require('./routes/about');  //getting errors
 //const projectRouter = require('./routes/project');  //getting errors
 //const apps = require('./routes/app');  //getting errors
+
+
+app.get('/project/:id',(req,res, next) =>{
+  const projectId = req.params.id;
+  const project = data[projectId]
+
+  if(project){
+      res.render('project',{project});
+  }else{
+  next(); 
+  }
+});
 
 // Import 404 and global error handlers
 const errorHandlers = require('./errorHandlers');
