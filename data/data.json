@@ -8,7 +8,7 @@
       "description": "type description",
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/unit1RandomQuoteGenerator/",
-      "github_link": "",
+      "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
@@ -17,7 +17,7 @@
       "description": "type description",
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/data-pagination-and-filtering-v1/",
-      "github_link": "",
+      "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
@@ -26,7 +26,7 @@
       "description": "type description",
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/interactive-form-v3/",
-      "github_link": "",
+      "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
@@ -35,7 +35,7 @@
       "description": "type description",
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/oop_game-v2-1-/",
-      "github_link": "",
+      "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
@@ -44,7 +44,7 @@
       "description": "type description",
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/Public_API_Requests_Techdegree_Unit-5/",
-      "github_link": "",
+      "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": "/static/images/replace_name.jpg"
     }
   ]
