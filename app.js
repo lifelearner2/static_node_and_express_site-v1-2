@@ -6,7 +6,7 @@ const port = 3000
 
 const dataJson = require('./data/data.json');
 const data = dataJson.projects;
-//const data = dataJson.project;
+//const data = dataJson.project; 
 
 //const data = require('data.json');
 

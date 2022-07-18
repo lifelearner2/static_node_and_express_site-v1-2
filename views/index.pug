@@ -1,4 +1,4 @@
-extends layout
+extends layout.pug
 
 block content
 
@@ -19,7 +19,7 @@ block content
         
 
  a(href=`/projects/${project.id}`)
-      h2= project.project_name
+      h2= project.Random_Quote_Generator
       img(src=`${project.image_url}` width='320' height='240')
  
        .cell
