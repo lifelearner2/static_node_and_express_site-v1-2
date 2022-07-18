@@ -4,46 +4,46 @@
   "project": [
     {
       "id": 0,
-      "project_name": "type name",
+      "project_name": "Random Quote Generator",
       "description": "type description",
       "technologies": ["", ""],
-      "live_link": "",
+      "live_link": "https://lifelearner2.github.io/unit1RandomQuoteGenerator/",
       "github_link": "",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 1,
-      "project_name": "type name",
+      "project_name": "Data Pagination & Filtering",
       "description": "type description",
       "technologies": ["", ""],
-      "live_link": "",
+      "live_link": "https://lifelearner2.github.io/data-pagination-and-filtering-v1/",
       "github_link": "",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 2,
-      "project_name": "type name",
+      "project_name": "Interactive Form",
       "description": "type description",
       "technologies": ["", ""],
-      "live_link": "",
+      "live_link": "https://lifelearner2.github.io/interactive-form-v3/",
       "github_link": "",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 3,
-      "project_name": "type name",
+      "project_name": "Object Oriented Programming - Phrase Hunter Game",
       "description": "type description",
       "technologies": ["", ""],
-      "live_link": "",
+      "live_link": "https://lifelearner2.github.io/oop_game-v2-1-/",
       "github_link": "",
       "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 4,
-      "project_name": "type name",
+      "project_name": "Public API Requests",
       "description": "type description",
       "technologies": ["", ""],
-      "live_link": "",
+      "live_link": "https://lifelearner2.github.io/Public_API_Requests_Techdegree_Unit-5/",
       "github_link": "",
       "image_urls": "/static/images/replace_name.jpg"
     }
