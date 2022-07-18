@@ -20,8 +20,6 @@ const data = dataJson.projects;
 //const projectRouter = require('./routes/project');  //getting errors
 //const apps = require('./routes/app');  //getting errors
 
-
-
 //setting up a static (images & stylesheets) & express.static middleware to make the public folder contents available at the root of the application.
 app.use("/static", express.static("public"));
 
@@ -67,7 +65,7 @@ app.get("/project/:id", function (req, res, next) {
 
   if (project) {
     // 2. Pass the project data to the 'project' template
-    res.render("project", { project });
+    res.render("project", { projects });
   } else {
     res.sendStatus(404);
   }

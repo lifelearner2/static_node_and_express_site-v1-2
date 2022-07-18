@@ -8,8 +8,8 @@
       "live_link": "https://lifelearner2.github.io/unit1RandomQuoteGenerator/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": [
-        "https://static/images/RandomQuote1.png",
-        "https://static/images/RandomQuote2.png"
+          "/static/images/randomQuote1.jpg",
+          "/static/images/randomQuote2.jpg"
       ]
     },
     {

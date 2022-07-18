@@ -14,8 +14,8 @@ block content
     each project in projects 
 
       a(href=`/projects/${project.id}`)
-        h2= project.Random_Quote_Generator
-        img(src=`${project.image_url}` width='320' height='240')
+        h2= project.project_name
+        img(src=`${project.image_urls[0]}` width='320' height='240')
 
       .cell
         a(href='#')
