@@ -4,48 +4,48 @@
   "project": [
     {
       "id": 0,
-      "project_name": "",
-      "description": "",
+      "project_name": "type name",
+      "description": "type description",
       "technologies": ["", ""],
       "live_link": "",
       "github_link": "",
-      "image_urls": ""
+      "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 1,
-      "project_name": "",
-      "description": "",
+      "project_name": "type name",
+      "description": "type description",
       "technologies": ["", ""],
       "live_link": "",
       "github_link": "",
-      "image_urls": ""
+      "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 2,
-      "project_name": "",
-      "description": "",
+      "project_name": "type name",
+      "description": "type description",
       "technologies": ["", ""],
       "live_link": "",
       "github_link": "",
-      "image_urls": ""
+      "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 3,
-      "project_name": "",
-      "description": "",
+      "project_name": "type name",
+      "description": "type description",
       "technologies": ["", ""],
       "live_link": "",
       "github_link": "",
-      "image_urls": ""
+      "image_urls": "/static/images/replace_name.jpg"
     },
     {
       "id": 4,
-      "project_name": "",
-      "description": "",
+      "project_name": "type name",
+      "description": "type description",
       "technologies": ["", ""],
       "live_link": "",
       "github_link": "",
-      "image_urls": ""
+      "image_urls": "/static/images/replace_name.jpg"
     }
   ]
 }

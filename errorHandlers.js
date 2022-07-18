@@ -7,7 +7,7 @@
   // Log statement to indicate that this function is running 
     console.log('Handling 404 error');
   
-  // Create new error to handle non-existent routes
+  // Created new error to handle non-existent routes
     const err = new Error('err');
     err.status = 404;
     err.message = 'Oops, page not found. Looks like that route does not exist.';

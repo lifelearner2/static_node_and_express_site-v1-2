@@ -8,14 +8,15 @@ const port = 3000
 // Import routes
 const routes = require('./routes/routes');
 const indexRouter = require('./routes/index');
-//const aboutRouter = require('./routes/about');
-
+//const aboutRouter = require('./routes/about');  //getting errors
+//const projectRouter = require('./routes/project');  //getting errors
+//const apps = require('./routes/app');  //getting errors
 
 // Import 404 and global error handlers
 const errorHandlers = require('./errorHandlers');
 
 // Pass route handlers to the app
-app.use(routes);
+app.use('/', routes);
 app.use('/', indexRouter);
 
 // Pass 404 and global error handlers to the app
@@ -23,14 +24,14 @@ app.use(errorHandlers.handleFourOhFour);
 app.use(errorHandlers.handleGlobalError);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome to My Portfolio!')
 })
 
 //middleware set up
 app.set('view engine', 'pug');
 
-//use a static route and the express.static method to serve the static files located in the public folder
- app.use('/static', express.static('public'));
+//setting up a static (images & stylesheets) & express.static middleware to make the public folder contents available at the root of the application.
+ app.use('/static', express.static('public') );
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
@@ -39,6 +40,7 @@ app.use((req, res, next) => {
   next(err);
 });
 
+//Handling errors caught by route handlers
 app.use((err, req, res, next) => {
   if (err.status = 404) {
     err.message = 'Not Found';
