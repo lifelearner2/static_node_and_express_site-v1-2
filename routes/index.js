@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const { projects } = require("../data/data.json");
+const { project } = require("../data/data.json");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // 1. Pass all project data to 'index' template
-  res.render('index', { projects });
+  res.render('index', { project });
 });
 
 /* GET project page. */
-router.get('/projects/:id', function(req, res, next) {
+router.get('/project/:id', function(req, res, next) {
   const projectId = req.params.id;
   const project = projects.find( ({ id }) => id === +projectId );
   
