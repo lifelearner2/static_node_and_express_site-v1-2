@@ -31,7 +31,10 @@
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/interactive-form-v3/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
-      "image_urls": "/static/images/replace_name.jpg"
+      "image_urls": [
+        "/static/images/interactiveForm1.jpg",
+        "/static/images/interactiveForm2.jpg"
+      ]
     },
     {
       "id": 3,
@@ -40,7 +43,13 @@
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/oop_game-v2-1-/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
-      "image_urls": "/static/images/replace_name.jpg"
+      "image_urls": [
+        "/static/images/phraseHunter1.jpg",
+        "/static/images/phraseHunter2.jpg",
+        "/static/images/phraseHunter3.jpg",
+        "/static/images/phraseHunter4.jpg",
+        "/static/images/phraseHunter5.jpg"
+      ]
     },
     {
       "id": 4,
