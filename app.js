@@ -3,10 +3,7 @@ const express = require("express");
 const pug = require("pug");
 const app = express();
 const port = 3000;
-//const data = require("./data/data.json");
 const {projects} = require("./data/data.json");
-//const projects = data.projects;
-
 
 //setting up a static (images & stylesheets) & express.static middleware to make the public folder contents available at the root of the application.
 app.use("/static", express.static("public"));
@@ -36,55 +33,8 @@ app.get("/project/:id", (req, res, next) => {
     } else {
       next();
     }
-
-
 })
 
-// app.get("/projects/id", (req, res, next) => {
-//   res.render("projects");
-//   console.log('handling request for projects page');
-// });
-// app.get("/project/:id", function (req, res, next) {
-//   console.log('handling request for the project page')
-// const projectId = req.params.id;
-//   const data = data.find(({ id }) => id === +projectId);
-// if (projects) {
-//   // 2. Pass the project data to the 'project' template
-//   res.render("projects", { projects });
-// } else {
-//   res.sendStatus(404);
-// }
-
-// });
-
-// app.get("/project/:id", (req, res, next) => {
-//   const projectId = req.params.id;
-  //const projects = data[projectId];
-  // if (project) {
-  //   res.render("project", { project });
-  // } else {
-  //   next();
-  // }
-// 
-// });
-
-//Project page route
-// app.get("/project/:id", (req, res, next) => {
-//   const projectId = req.params.id;
-//   const project = projects.find(({ id }) => id === +projectId);
-//   if (project) {
-//     res.render("project", { project });
-//   } else {
-//     const err = new Error("page-not-found");
-//     err.status = 404;
-//     err.message = "Sorry your request could not be found";
-//     res.render("error", { err });
-//   }
-// });
-
-// Pass route handlers to the app
-//app.use("/", routes);
-//app.use("/", indexRouter);
 
 // Import 404 and global error handlers
 //const errorHandlers = require("./errorHandlers");
