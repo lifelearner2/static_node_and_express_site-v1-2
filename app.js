@@ -59,17 +59,17 @@ app.get("/", (req, res) => {
 
 
 /* GET project page. */
-app.get("/project/:id", function (req, res, next) {
-  const projectId = req.params.id;
-  const project = projects.find(({ id }) => id === +projectId);
+// app.get("/projects/:id", function (req, res, next) {
+//   //const projectId = req.params.id;
+//   const projects = projects.find(({ id }) => id === +projectsId);
 
-  if (project) {
-    // 2. Pass the project data to the 'project' template
-    res.render("project", { projects });
-  } else {
-    res.sendStatus(404);
-  }
-});
+//   if (projects) {
+//     // 2. Pass the project data to the 'project' template
+//     res.render("project", { projects });
+//   } else {
+//     res.sendStatus(404);
+//   }
+// });
 
 
 
@@ -85,18 +85,18 @@ app.get("/project/:id", function (req, res, next) {
 // });
 
   //Project page route
-  // app.get("/project/:id", (req, res, next) => {
-  //   const projectId = req.params.id;
-  //   const project = projects.find(({ id }) => id === +projectId);
-  //   if (project) {
-  //     res.render("project", { project });
-  //   } else {
-  //     const err = new Error("not found");
-  //     err.status = 404;
-  //     err.message = "Sorry your request could not be found";
-  //     res.render("error", { err });
-  //   }
-  // });
+  app.get("/project/:id", (req, res, next) => {
+    const projectId = req.params.id;
+    const project = projects.find(({ id }) => id === +projectId);
+    if (project) {
+      res.render("project", { project });
+    } else {
+      const err = new Error("not found");
+      err.status = 404;
+      err.message = "Sorry your request could not be found";
+      res.render("error", { err });
+    }
+  });
 
 // Pass route handlers to the app
 //app.use("/", routes);
