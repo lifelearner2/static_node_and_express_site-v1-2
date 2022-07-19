@@ -11,16 +11,12 @@ block content
   article.portfolio-project-thumbs
     .projects-box.box.grid
 
-    each project in projects 
+     each project in projects 
+      .cell 
+        a(href=`/project/${project.id}`)
+          h2= project.project_name
+          img(src=`${project.image_urls[0]}` width='320' height='240')
 
-      a(href=`/projects/${project.id}`)
-        h2= project.project_name
-        img(src=`${project.image_urls[0]}` width='320' height='240')
-
-      .cell
-        a(href='#')
-          img.thumbnail(src='https://placehold.it/550x550' alt='')
-          h5 My Site
 
 //- Use the example Pug code below and interpolated template literals as needed to dynamically generate:
 //- The paths in the link's href and img's src attributes

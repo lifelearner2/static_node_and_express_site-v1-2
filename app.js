@@ -3,22 +3,10 @@ const express = require("express");
 const pug = require("pug");
 const app = express();
 const port = 3000;
+//const data = require("./data/data.json");
+const {projects} = require("./data/data.json");
+//const projects = data.projects;
 
-
-//const router = express.Router();
-//const { project } = require("../data/data.json");
-const dataJson = require("./data/data.json");
-const data = dataJson.projects;
-//const data = dataJson.project;
-
-//const data = require('data.json');
-
-// Import routes
-//const routes = require("./routes/routes");
-//const indexRouter = require("./routes/index");
-//const aboutRouter = require('./routes/about');  //getting errors
-//const projectRouter = require('./routes/project');  //getting errors
-//const apps = require('./routes/app');  //getting errors
 
 //setting up a static (images & stylesheets) & express.static middleware to make the public folder contents available at the root of the application.
 app.use("/static", express.static("public"));
@@ -28,101 +16,96 @@ app.set("view engine", "pug");
 
 /* GET home page. */
 app.get("/", (req, res) => {
-  res.render("index", { projects: data });
+  res.render("index", { projects: projects });
 });
 
-// app.get("/", function (req, res, next) {
-//   // 1. Pass all project data to 'index' template
-//   res.render("index", { project });
-// });
-
-app.get("/", (req, res) => {
-  res.send("Welcome to My Portfolio!");
+//About Page route
+app.get("/about", (req, res, next) => {
+  res.render("about");
+  console.log('Handling request to "about" route, "/about"');
 });
-
-// app.get("/", (req, res) => {
-//   res.render("index", { data });
-// });
-
-// Home Page route
-//An "index" route (/) to render the "Home" page with the locals set to data.projects
-// app.get("/", (req, res, next) => {
-//   // Log statement to indicate that this function is running
-//   console.log('Handling request to root or "home" route, "/"');
-//   //res.render('index', { project });  //error says project and/or projects is not defined
-// });
-
-  //About Page route
-  app.get("/about", (req, res, next) => {
-    console.log('Handling request to "about" route, "/about"');
-  });
-
 
 /* GET project page. */
-// app.get("/projects/:id", function (req, res, next) {
-//   //const projectId = req.params.id;
-//   const projects = projects.find(({ id }) => id === +projectsId);
-
-//   if (projects) {
-//     // 2. Pass the project data to the 'project' template
-//     res.render("project", { projects });
-//   } else {
-//     res.sendStatus(404);
-//   }
-// });
-
-
-
-// app.get("/project/:id", (req, res, next) => {
-//   const projectId = req.params.id;
-//   const project = data[projectId];
-
-//   if (project) {
-//     res.render("project", { project });
-//   } else {
-//     next();
-//   }
-// });
-
-  //Project page route
-  app.get("/projects/:id", (req, res, next) => {
-    const projectId = req.params.id;
-    const project = projects.find(({ id }) => id === +projectId);
+app.get("/project/:id", (req, res, next) => {
+  // res.render("project");
+  console.log('Processing request for "Projects" page');
+  const projectId = req.params.id;
+  const project = projects.find(({ id }) => id === +projectId);
     if (project) {
       res.render("project", { project });
     } else {
-      const err = new Error("not found");
-      err.status = 404;
-      err.message = "Sorry your request could not be found";
-      res.render("error", { err });
+      next();
     }
-  });
+
+
+})
+
+// app.get("/projects/id", (req, res, next) => {
+//   res.render("projects");
+//   console.log('handling request for projects page');
+// });
+// app.get("/project/:id", function (req, res, next) {
+//   console.log('handling request for the project page')
+// const projectId = req.params.id;
+//   const data = data.find(({ id }) => id === +projectId);
+// if (projects) {
+//   // 2. Pass the project data to the 'project' template
+//   res.render("projects", { projects });
+// } else {
+//   res.sendStatus(404);
+// }
+
+// });
+
+// app.get("/project/:id", (req, res, next) => {
+//   const projectId = req.params.id;
+  //const projects = data[projectId];
+  // if (project) {
+  //   res.render("project", { project });
+  // } else {
+  //   next();
+  // }
+// 
+// });
+
+//Project page route
+// app.get("/project/:id", (req, res, next) => {
+//   const projectId = req.params.id;
+//   const project = projects.find(({ id }) => id === +projectId);
+//   if (project) {
+//     res.render("project", { project });
+//   } else {
+//     const err = new Error("page-not-found");
+//     err.status = 404;
+//     err.message = "Sorry your request could not be found";
+//     res.render("error", { err });
+//   }
+// });
 
 // Pass route handlers to the app
 //app.use("/", routes);
 //app.use("/", indexRouter);
 
 // Import 404 and global error handlers
-const errorHandlers = require("./errorHandlers");
+//const errorHandlers = require("./errorHandlers");
 
 // Pass 404 and global error handlers to the app
 // app.use(errorHandlers.handleFourOhFour);
 // app.use(errorHandlers.handleGlobalError);
 
-app.use((req, res, next) => {
-  const err = new Error("Not Found");
-  err.status = 404;
-  console.log("Error 404 Not Found");
-  next(err);
-});
-
+// app.use((req, res, next) => {
+//   const err = new Error("Not Found");
+//   err.status = 404;
+//   console.log("Error 404 Not Found");
+//   next(err);
+// });
 
 //Handling errors caught by route handlers
 app.use((err, req, res, next) => {
   if ((err.status = 404)) {
-    err.message = "Not Found";
+    err.message = "page-not-found";
     console.log("Error 404 Sorry Your Page was Not Found");
-    res.status(404).render("not-found", { err });
+    res.status(404).render("page-not-found", { err });
   } else {
     err.message = "Uh oh, something is wrong with the server";
     err.status = 500;
@@ -141,9 +124,9 @@ const handleFourOhFour = (req, res, next) => {
   console.log("Handling 404 error");
 
   // Created new error to handle non-existent routes
-  const err = new Error("err");
-  err.status = 404;
-  err.message = "Oops, page not found. Looks like that route does not exist.";
+  // const err = new Error("err");
+  // err.status = 404;
+  // err.message = "Oops, page not found. Looks like that route does not exist.";
 
   // Pass error to global error handler below
   next(err);
@@ -163,9 +146,6 @@ const handleGlobalError = (err, req, res, next) => {
   res.status(err.status || 500);
   res.send(err.message);
 };
-
-
-
 
 // Turn on Express Server
 app.listen(port, () => {
