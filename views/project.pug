@@ -23,12 +23,16 @@ block content
         ul
 
           //- Use an `each` iterator and interpolation to dynamically replace the li tags below with the technologies listed for this project
-          li HTML 
-          li CSS 
-          li JavaScript
-          li Visual Studio Code editor
-            each technologies in project.technologies
+          //- li HTML 
+          //- li CSS 
+          //- li JavaScript
+          //- li Visual Studio Code editor
+              
+          each technologies in project.technologies
               li= technologies
+              
+          //- each technology, index in project.technologies []
+          //-     li= index + ': ' + technology
 
         //- Add the href values to the links below
         a.btn-link(href=`/project/${project.id}/live_link`) Live Demo
