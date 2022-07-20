@@ -3,7 +3,7 @@
     {
       "id": 0,
       "project_name": "Random Quote Generator",
-      "description": "This project uses JavaScript loops, arrays and objects as it displays a quote picked randomly from an array of quotes that I put together. Each quote has properties such as text, source, citation and date. In my code I utilized two functions to select a random quote and to print the random quote to the web page. Click the Live Demo link to find inspiration from the quotes.",
+      "description": "This project uses JavaScript loops, arrays and objects as it displays a quote picked randomly from an array of 8 quotes that I put together. Each quote has properties such as text, source, citation and date. In my code I utilized two functions to select a random quote and to print the random quote to the web page. Click the Live Demo link to find inspiration from the quotes.",
       "technologies": [
         "JavaScript",
         "HTML",
