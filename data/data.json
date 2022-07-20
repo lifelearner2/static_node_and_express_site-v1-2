@@ -12,7 +12,7 @@
         "GitHub"
       ],
       "live_link": "https://lifelearner2.github.io/unit1RandomQuoteGenerator/",
-      "github_link": "https://github.com/lifelearner2?tab=stars",
+      "github_link": "https://github.com/lifelearner2/unit1RandomQuoteGenerator",
       "image_urls": [
         "/static/images/randomQuote1.jpg",
         "/static/images/randomQuote2.jpg"
@@ -29,7 +29,7 @@
         "GitHub"
       ],
       "live_link": "https://lifelearner2.github.io/data-pagination-and-filtering-v1/",
-      "github_link": "https://github.com/lifelearner2?tab=stars",
+      "github_link": "https://github.com/lifelearner2/data-pagination-and-filtering-v1",
       "image_urls": [
         "/static/images/dataPagination1.jpg",
         "/static/images/dataPagination2.jpg"
@@ -47,7 +47,7 @@
         "GitHub"
       ],
       "live_link": "https://lifelearner2.github.io/interactive-form-v3/",
-      "github_link": "https://github.com/lifelearner2?tab=stars",
+      "github_link": "https://github.com/lifelearner2/interactive-form-v3",
       "image_urls": [
         "/static/images/interactiveForm1.jpg",
         "/static/images/interactiveForm2.jpg"
@@ -66,7 +66,7 @@
         "GitHub"
       ],
       "live_link": "https://lifelearner2.github.io/oop_game-v2-1-/",
-      "github_link": "https://github.com/lifelearner2?tab=stars",
+      "github_link": "https://github.com/lifelearner2/oop_game-v2-1-",
       "image_urls": [
         "/static/images/phraseHunter1.jpg",
         "/static/images/phraseHunter2.jpg",
@@ -81,7 +81,7 @@
       "description": "type description",
       "technologies": ["", ""],
       "live_link": "https://lifelearner2.github.io/Public_API_Requests_Techdegree_Unit-5/",
-      "github_link": "https://github.com/lifelearner2?tab=stars",
+      "github_link": "https://github.com/lifelearner2/Public_API_Requests_Techdegree_Unit-5",
       "image_urls": [
         "/static/images/publicAPI1.jpg",
         "/static/images/publicAPI2.jpg"
