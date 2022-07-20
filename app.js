@@ -34,22 +34,6 @@ app.get("/project/:id", (req, res, next) => {
       next();
     }
 })
-
-
-// Import 404 and global error handlers
-//const errorHandlers = require("./errorHandlers");
-
-// Pass 404 and global error handlers to the app
-// app.use(errorHandlers.handleFourOhFour);
-// app.use(errorHandlers.handleGlobalError);
-
-// app.use((req, res, next) => {
-//   const err = new Error("Not Found");
-//   err.status = 404;
-//   console.log("Error 404 Not Found");
-//   next(err);
-// });
-
 //Handling errors caught by route handlers
 app.use((err, req, res, next) => {
   if ((err.status = 404)) {
@@ -64,23 +48,8 @@ app.use((err, req, res, next) => {
   }
 });
 
-/*
- * 404 and Global Error Handlers
- */
-
-// Error handler for handling non-existent routes
-const handleFourOhFour = (req, res, next) => {
   // Log statement to indicate that this function is running
   console.log("Handling 404 error");
-
-  // Created new error to handle non-existent routes
-  // const err = new Error("err");
-  // err.status = 404;
-  // err.message = "Oops, page not found. Looks like that route does not exist.";
-
-  // Pass error to global error handler below
-  next(err);
-};
 
 // Global error handler
 const handleGlobalError = (err, req, res, next) => {
