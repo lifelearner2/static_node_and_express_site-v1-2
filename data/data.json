@@ -78,8 +78,16 @@
     {
       "id": 4,
       "project_name": "Public API Requests",
-      "description": "type description",
-      "technologies": ["", ""],
+      "description": "I created a faux Employee Directory by using JavaScript to communicate with an API (Application Programming Interface) site using AJAX to retrieve random user information to be displayed in my directory. I also added a modal dialog box to focus on one employee and their info as well as added buttons for functionality. New users populated to the directory when the page is refreshed. If you're interested in pulling tweets from Twitter to display on your webpage in real time, the skills I used in this project would lend itself to making your webpage update with tweets from Twitter. Check out the Live Demo or take a peek at my code in my Github Repo. ",
+      "technologies": [
+        "Fetch and Public API's", 
+        "Terminal",
+        "Git and Github",
+        "HTTP",
+        "AJAX",
+        "VS Code",
+        "JavaScript"
+      ],
       "live_link": "https://lifelearner2.github.io/Public_API_Requests_Techdegree_Unit-5/",
       "github_link": "https://github.com/lifelearner2/Public_API_Requests_Techdegree_Unit-5",
       "image_urls": [
