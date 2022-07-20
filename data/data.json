@@ -4,7 +4,7 @@
       "id": 0,
       "project_name": "Random Quote Generator",
       "description": "This project uses JavaScript loops, arrays and objects as it displays a quote picked randomly from an array of quotes that I put together. Each quote has properties such as text, source, citation and date. In my code I utilized two functions to select a random quote and to print the random quote to the web page",
-      "technologies": ["JavaScript", "HTML", "CSS", "Visual Studio Code editor"],
+      "technologies": ["JavaScript", "HTML", "CSS", "Visual Studio Code editor", "GitHub"],
       "live_link": "https://lifelearner2.github.io/unit1RandomQuoteGenerator/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": [
@@ -15,8 +15,8 @@
     {
       "id": 1,
       "project_name": "Data Pagination & Filtering",
-      "description": "type description",
-      "technologies": ["", ""],
+      "description": "This project involved data, objects, DOM manipulation and writing pagination to enhance visibility of web page. My code takes an array of student objects, displays a list on the page with each student and then paginates them in multiples of 9. Users can use the numbered buttons to click to through each page.",
+      "technologies": ["JavaScript", "CSS", "VS Code", "GitHub"],
       "live_link": "https://lifelearner2.github.io/data-pagination-and-filtering-v1/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": [
@@ -27,8 +27,8 @@
     {
       "id": 2,
       "project_name": "Interactive Form",
-      "description": "type description",
-      "technologies": ["", ""],
+      "description": "I took a basic web form and used JavaScript to add interactivity and enhance usability, I incorporated live validators to check for correct information that gives immediate feedback to the user. I implemented a focus feature which placed the cursor in the first text field once the page is loaded. I also implemented live interactivity on the form based on the user's selection with the job role, t-shirt, total cost and payment sections. Validation also provides feedback to the user if they attempt to submit the form without it being complete. I also used regex in my code to provide parameters for the credit card and zip code fields. My code involved conditionals, regular expressions adn string manipulation.",
+      "technologies": ["JavaScript", "HTML", "Accessibility", "VS Code", "GitHub"],
       "live_link": "https://lifelearner2.github.io/interactive-form-v3/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": [
@@ -40,7 +40,7 @@
       "id": 3,
       "project_name": "Object Oriented Programming - Phrase Hunter Game",
       "description": "type description",
-      "technologies": ["", ""],
+      "technologies": ["JavaScript", "HTML", "CSS", "OOP", "VS Code", "GitHub"],
       "live_link": "https://lifelearner2.github.io/oop_game-v2-1-/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": [
