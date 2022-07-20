@@ -1,6 +1,6 @@
 # static_node_and_express_site-v1-2
 
-Jeanene Cannon Portfolio
+Jeanene Cannon Portfolio:
 In addition to completing this portfolio as required, I also made the following improvements: 
 1. Changed the background color of the sidebar.
 2. Changed the text color on the sidebar.
