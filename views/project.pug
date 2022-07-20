@@ -23,20 +23,21 @@ block content
         ul
 
           //- Use an `each` iterator and interpolation to dynamically replace the li tags below with the technologies listed for this project
-          li HTML
-          li CSS
+          li HTML 
+          li CSS 
           li JavaScript
-            each technology in project.technologies
-              li= technology
+          li Visual Studio Code editor
+            each technologies in project.technologies
+              li= technologies
 
         //- Add the href values to the links below
-        a.btn-link(href='') Live Demo
-        a.btn-link(href='') GitHub Repo
+        a.btn-link(href=`/project/${project.id}/live_link`) Live Demo
+        a.btn-link(href='https://github.com/lifelearner2?tab=stars') GitHub Repo
 
     .project-img-box.box
 
       //- Replace the URLs in the src attributes below with interpolated template literals to dynamically add your project images, and add descriptions to the alt attributes
-      img.project-img(src='https://placehold.it/1200x550' alt='')
+      img.project-img(src='/static/images/' alt='Project Image')
       img.project-img(src='https://placehold.it/1200x550' alt='')
       img.project-img(src='https://placehold.it/1200x550' alt='')
       img(src=`${project.image_url}` width='320' height='240')

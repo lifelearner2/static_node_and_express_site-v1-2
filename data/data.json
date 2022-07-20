@@ -5,8 +5,8 @@
     {
       "id": 0,
       "project_name": "Random Quote Generator",
-      "description": "type description",
-      "technologies": ["", ""],
+      "description": "This project uses JavaScript loops, arrays and objects as it displays a quote picked randomly from an array of quotes that I put together. Each quote has properties such as text, source, citation and date. In my code I utilized two functions to select a random quote and to print the random quote to the web page",
+      "technologies": "",
       "live_link": "https://lifelearner2.github.io/unit1RandomQuoteGenerator/",
       "github_link": "https://github.com/lifelearner2?tab=stars",
       "image_urls": [
