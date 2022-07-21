@@ -39,16 +39,6 @@ app.use((req, res, next) => {
   const err = new Error("Not Found");
     err.status = 404;
     next(err);
-    
-  //   err.message = "page-not-found";
-  //   console.log("Error 404 Sorry Your Page was Not Found");
-  //   res.status(404).render("page-not-found", { err });
-  // } else {
-  //   err.message = "Uh oh, something is wrong with the server";
-  //   err.status = 500;
-  //   console.log("Error 500 Something is wrong with the server");
-  //   res.render("error");
-  // }
 });
 
   // Log statement to indicate that this function is running
