@@ -35,36 +35,34 @@ app.get("/project/:id", (req, res, next) => {
     }
 })
 //Handling errors caught by route handlers
-app.use((err, req, res, next) => {
-  if ((err.status = 404)) {
-    err.message = "page-not-found";
-    console.log("Error 404 Sorry Your Page was Not Found");
-    res.status(404).render("page-not-found", { err });
-  } else {
-    err.message = "Uh oh, something is wrong with the server";
-    err.status = 500;
-    console.log("Error 500 Something is wrong with the server");
-    res.render("error");
-  }
+app.use((req, res, next) => {
+  const err = new Error("Not Found");
+    err.status = 404;
+    next(err);
+    
+  //   err.message = "page-not-found";
+  //   console.log("Error 404 Sorry Your Page was Not Found");
+  //   res.status(404).render("page-not-found", { err });
+  // } else {
+  //   err.message = "Uh oh, something is wrong with the server";
+  //   err.status = 500;
+  //   console.log("Error 500 Something is wrong with the server");
+  //   res.render("error");
+  // }
 });
 
   // Log statement to indicate that this function is running
-  console.log("Handling 404 error");
+  //console.log("Handling 404 error");
 
 // Global error handler
-const handleGlobalError = (err, req, res, next) => {
-  // Log statement to indicate that this function is running
-  console.log("Handling a global error");
-  console.log(err);
-
-  // Set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {};
-
-  // Set error status and send error message to the page
-  res.status(err.status || 500);
-  res.send(err.message);
-};
+app.use((err, req, res, next) => {
+  if (err.status === 404) {
+    res.status(404).render('page-not-found', { err });
+  } else {
+    err.message = err.message || `Oops!  It looks like something went wrong on the server.`;
+    res.status(err.status || 500).render('error', { err });
+  }
+});
 
 // Turn on Express Server
 app.listen(port, () => {
