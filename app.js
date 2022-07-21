@@ -41,13 +41,11 @@ app.use((req, res, next) => {
     next(err);
 });
 
-  // Log statement to indicate that this function is running
-  //console.log("Handling 404 error");
-
 // Global error handler
 app.use((err, req, res, next) => {
   if (err.status === 404) {
     res.status(404).render('page-not-found', { err });
+    console.log("Handling 404 error");
   } else {
     err.message = err.message || `Oops!  It looks like something went wrong on the server.`;
     res.status(err.status || 500).render('error', { err });
