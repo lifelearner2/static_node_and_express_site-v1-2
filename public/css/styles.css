@@ -251,7 +251,10 @@ nav a span {
   color: #222;;
   margin: 0 auto 8px;
 }
-
+/* 
+the color line below was added, courtesy of Treehouse Student Support Specialist, because I wanted to get rid of the 
+default purple "clicked" text from google on my project text.
+*/
 .cell a {
   width: 100%;
   color:rgba(170, 75, 7, 0.737)
