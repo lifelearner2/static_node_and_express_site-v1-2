@@ -1,4 +1,5 @@
 # static_node_and_express_site-v1-2
+(unit 6 of TechDegree)
 
 Jeanene Cannon Portfolio:
 In addition to completing this portfolio as required, I also made the following improvements: 
